@@ -6,5 +6,5 @@ variable "vpc_cidr" {
 }
 
 variable "tenancy" {
-  default = "deafult"
+  default = "default"
 }
