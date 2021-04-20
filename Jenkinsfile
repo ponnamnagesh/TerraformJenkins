@@ -4,20 +4,18 @@ pipeline {
   PATH = "${PATH}:${getTerraformpath()}"
 }
 stages {
-  stage('TerraformINIT') {
-    steps {
+  stage('TerraformINIT and apply - dev') {
+    steps{
+      sh returnStatus: true, script: terraform workspace new dev'
       sh "terraform init"
+      sh "terraform apply -var-file=dev.tfvars -auto-approve"
     }
   }
-
-  stage('TerraformPLAN') {
-    steps {
-    sh "terraform plan"
-    }
-  }
-  stage('TerraformAPPLY') {
-    steps {
-      sh "terraform apply -auto-approve"
+  stage('TerraformINIT and apply - prod') {
+    steps{
+      sh returnStatus: true, script: 'terraform workspace new prod'
+      sh "terraform init"
+      sh "terraform apply -var-file=prod.tfvars -auto-approve"
     }
   }
 }
