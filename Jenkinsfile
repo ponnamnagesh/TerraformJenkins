@@ -7,7 +7,7 @@ stages {
   stage('s3 - create bucket'){
   steps{
   script{
-  getTerraformpath('javhome-tf-121234567')
+  creates3Bucket('javhome-tf-121234567')
         }
       }
     }
