@@ -1,0 +1,11 @@
+---
+  - hosts: localhost
+    tasks:
+        -name: Install boto3
+        pip:
+          name: boto3
+          state: present
+        -name: create s3 bucket
+        s3_bucket:
+          name: javhome-tf-121234567
+          state: present
