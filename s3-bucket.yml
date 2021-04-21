@@ -8,5 +8,5 @@
           state: present
         - name: create s3 bucket
         - s3_bucket:
-          name: javhome-tf-121234567
+        - name: javhome-tf-121234567
           state: present
