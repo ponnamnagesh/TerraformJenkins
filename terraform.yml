@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-   become: True
+    become: True
     vars:
       state: present
       s3_bucket: javhome-tf-121234567
