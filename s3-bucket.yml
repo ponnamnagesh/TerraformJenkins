@@ -3,7 +3,7 @@
     become: True
     tasks:
         - name: Install boto3
-        pip:
+        - pip:
           name: boto3
           state: present
         - name: create s3 bucket
