@@ -31,7 +31,7 @@ stages {
 def getTerraformpath(){
 def tfHome = tool name: 'Terraform-0.12', type: 'terraform'
 return tfHome
-
+}
 def creates3Bucket(bucketName){
 sh returnStatus: true, script: 'aws s3 mb ${bucketName} --region=us-east-1'
 }
