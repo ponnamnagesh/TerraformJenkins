@@ -1,18 +1,7 @@
 ---
--
-  become: true
-  hosts: localhost
+- hosts: localhost
   tasks:
-    -
-      name: "Install boto3"
-    -
-      name: boto3
-      pip: ~
-      state: present
-    -
-      name: "create s3 bucket"
-    -
-      s3_bucket: ~
-    -
-      name: javhome-tf-121234567
-      state: present
+    - name: Create S3 bucket
+      s3_bucket:
+        name: javhome-tf-121234567
+        state: present
