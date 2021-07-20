@@ -3,5 +3,5 @@
   tasks:
     - name: Create S3 bucket
       s3_bucket:
-        name: javhome-tf-121234567
+        name: nageshbucketaws223456
         state: present
