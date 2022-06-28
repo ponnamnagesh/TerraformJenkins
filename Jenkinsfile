@@ -26,10 +26,10 @@ stages {
 }
 }
 
-def getTerraformpath(){
-def tfHome = tool name: 'Terraform-0.12', type: 'terraform'
-return tfHome
-}
+//def getTerraformpath(){
+//def tfHome = tool name: 'Terraform-0.12', type: 'terraform'
+//return tfHome
+//}
 
 
 //Dummy comment to test webshook
